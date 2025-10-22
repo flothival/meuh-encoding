@@ -1,33 +1,151 @@
-# MEUH Encoder 🐄
+Here’s a clean, professional, and slightly playful **README.md** written in English — perfectly fitting for your Java **MEUH Encoder** project:
 
-A fun and creative text encoder that converts text into a **custom binary-based language** using the letters **M, E, U, H**.
+---
 
-Uppercase letters represent binary `1`, lowercase letters represent binary `0`. Spaces are used to separate groups of 4 bits for readability.
+# 🐄 MEUH Encoder
+
+A fun Java project that encodes and decodes text using a custom binary-based system inspired by the sacred cow’s “MEUH”.
+
+Each letter of your input text is converted into binary (8 bits).
+Then, each bit is represented by the letters `M`, `E`, `U`, `H` —
+**uppercase** for `1` and **lowercase** for `0`.
+
+In other words, every byte becomes a pair of MEUH sequences,
+one for the first 4 bits, and another for the last 4 bits.
+
+---
+
+## Example
+
+For the letter `a`:
+
+```
+'a' → ASCII 97 → binary 01100001
+```
+
+Encoding rule:
+`0 → lowercase`, `1 → uppercase`
+
+Mapping over `M E U H M E U H`:
+
+```
+01100001 → mEUh meuH
+```
+
+Result:
+
+```
+mEUh meuH
+```
+
+Decoding reverses the process:
+Uppercase becomes `1`, lowercase becomes `0`,
+and every 8 bits are converted back to the original character.
 
 ---
 
 ## Features
 
-- Encode any text into the MEUH format
-- Decode MEUH-encoded strings back to the original text
-- Simple command-line interface (CLI)
+* Pure Java — no external libraries needed.
+* Bidirectional: encode and decode easily.
+* Command-line interface with simple options.
+* Whitespace tolerant during decoding.
+* Entirely for fun, but surprisingly functional.
+
+---
+
+## Usage
+
+### Run
+
+```bash
+java Main
+```
+
+You’ll see:
+
+```
+************************************************
+*********** Welcome to MEUH encoding ***********
+************************************************
+
+1. encode
+2. decode
+select a function :
+```
+
+### Encoding Example
+
+```
+select a function : 1
+Please enter a sentence :
+a
+```
+
+Output:
+
+```
+mEUh meuH
+```
+
+### Decoding Example
+
+```
+select a function : 2
+Please enter the key :
+mEUh meuH
+```
+
+Output:
+
+```
+a
+```
 
 ---
 
 ## How It Works
 
-### Encoding
+1. **Encoding**
 
-Each character is converted to its **8-bit binary representation**. Then:
+   * Each character → 8-bit binary
+   * Each bit → `M/E/U/H`
 
-- **First 4 bits** → mapped to letters `M`, `E`, `U`, `H`  
-- **Last 4 bits** → mapped to letters `M`, `E`, `U`, `H`  
-- **Uppercase** = `1`, **Lowercase** = `0`  
-- Spaces are inserted after each group of 4 letters  
+     * Uppercase = `1`
+     * Lowercase = `0`
+   * Groups of 4 bits separated by spaces for readability.
 
-**Example:**
+2. **Decoding**
 
-```text
-Original text: "A"
-Binary:        01000001
-Encoded:       mEUh MEUh
+   * Ignores spaces.
+   * Reads groups of 8 letters.
+   * Converts uppercase/lowercase back into binary.
+   * Translates binary → original character.
+
+---
+
+## Example Session
+
+```
+Input  : test
+Binary : 01110100 01100101 01110011 01110100
+Output : mEUH mEuh mEUh mEuH mEUH meUH mEUH mEuh
+```
+
+Decoding it back gives you:
+
+```
+test
+```
+
+---
+
+## License
+
+MIT License — free to use, modify, and share while keeping the playful spirit alive.
+
+---
+Have fun with my project and the cows will thank you <br>
+Thank you for your visit 🐄
+
+<img src="img/vachePL.gif" alt="vache polonaise" width="500"/>
