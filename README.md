@@ -1,7 +1,3 @@
-Here’s a clean, professional, and slightly playful **README.md** written in English — perfectly fitting for your Java **MEUH Encoder** project:
-
----
-
 # 🐄 MEUH Encoder
 
 A fun Java project that encodes and decodes text using a custom binary-based system inspired by the sacred cow’s “MEUH”.
