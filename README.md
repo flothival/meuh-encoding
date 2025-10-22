@@ -1,6 +1,6 @@
 # 🐄 MEUH Encoder
 
-A fun Java project that encodes and decodes text using a custom binary-based system inspired by the sacred cow’s “MEUH”.
+A fun Java project that encodes and decodes text using a custom binary-based system inspired by the cow “MEUH”.
 
 Each letter of your input text is converted into binary (8 bits).
 Then, each bit is represented by the letters `M`, `E`, `U`, `H` —
@@ -37,16 +37,6 @@ mEUh meuH
 Decoding reverses the process:
 Uppercase becomes `1`, lowercase becomes `0`,
 and every 8 bits are converted back to the original character.
-
----
-
-## Features
-
-* Pure Java — no external libraries needed.
-* Bidirectional: encode and decode easily.
-* Command-line interface with simple options.
-* Whitespace tolerant during decoding.
-* Entirely for fun, but surprisingly functional.
 
 ---
 
