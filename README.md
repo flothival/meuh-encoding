@@ -1,4 +1,4 @@
-# 🐄 MEUH Encoder
+# 🐄 MEUH Encoding
 
 A fun Java project that encodes and decodes text using a custom binary-based system inspired by the cow “MEUH”.
 
